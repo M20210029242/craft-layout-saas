@@ -107,13 +107,13 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader("📊 Matriz de Fluxo")
     df_fluxo = pd.DataFrame(fluxo, index=nomes, columns=nomes)
-    st.dataframe(df_fluxo.style.background_gradient(cmap="Blues"), use_container_width=True)
+    st.dataframe(df_fluxo, use_container_width=True)
 
 with col2:
     st.subheader("📏 Matriz de Distâncias")
     df_dist = pd.DataFrame(dist, index=[f"P{i}" for i in range(n)],
                            columns=[f"P{i}" for i in range(n)])
-    st.dataframe(df_dist.style.background_gradient(cmap="Oranges"), use_container_width=True)
+    st.dataframe(df_dist, use_container_width=True)
 
 st.divider()
 
